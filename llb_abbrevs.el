@@ -1,4 +1,6 @@
 ;;-*-coding: emacs-mule;-*-
+(autoload 'expand-abbrev-hook "expand")
+
 (define-abbrev-table 'awk-mode-abbrev-table '(
     ))
 
@@ -61,14 +63,18 @@
     ("citenote" "" html-cite-note 0)
     ("bibv" "" html-bible-verse 0)
     ("u8" "" html-unicode-escape 0)
-    ("nd" "" html-unicode-nd 0)
-    ("md" "" html-unicode-md 0)
-    ("lq" "" html-unicode-lq 0)
-    ("rq" "" html-unicode-rq 0)
-    ("sqs" "" html-unicode-sqs 0)
-    ("ldq" "" html-unicode-ldq 0)
-    ("rdq" "" html-unicode-rdq 0)
-    ("dqs" "" html-unicode-dqs 0)
+    ("nd" "&ndash;" nil 0)
+    ("md" "&mdash;" nil 0)
+    ("lsq" "&lsquo" nil 0)
+    ("rsq" "&rsquo;" nil 0)
+    ("sq" "" html-single-quotes 0)
+    ("ldq" "&ldquo;" nil 0)
+    ("rdq" "&rdquo;" nil 0)
+    ("dq" "" html-double-quotes 0)
+    ("apos" "" html-apostrophe 0)
+    ("li" "" html-list-item 0)
+    ("para" "" html-paragraph 0)
+    ("hh1" "" html-h1 0)
     ))
 
 (define-abbrev-table 'fundamental-mode-abbrev-table '(
