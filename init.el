@@ -25,6 +25,9 @@
 (add-to-list 'load-path "~/.emacs.d/modes/html5")
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (add-to-list 'load-path "~/.emacs.d/color-themes")
+(add-to-list 'load-path "~/.emacs.d/modes/go")
+;; Use go-mode
+(require 'go-mode-load)
 ;; Color Theme
 (if window-system
     (progn (require 'color-theme-lee)
