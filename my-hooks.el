@@ -114,3 +114,12 @@
 ;;    \"-//W3C//DTD XHTML 1.0 Transitional//EN\" 
 ;;    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"))
 ;;	     ))
+
+;; Go Lang mode
+(add-hook 'go-mode-hook
+          '(lambda ()
+;;           Use tabs.
+             (setq-default indent-tabs-mode t)
+             (setq-default tab-width 4)
+))
+
