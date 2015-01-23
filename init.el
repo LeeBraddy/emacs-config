@@ -7,7 +7,13 @@
 ;; deftheme custom themes directory
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;; deftheme Color Theme
-(load-theme 'zenburn t)
+;;(load-theme 'zenburn t)
+;;(load-theme 'leuven t)
+;;(load-theme 'misterioso t)
+;;(load-theme 'birds-of-paradise-plus t)
+;;(load-theme 'darcula t)
+(load-theme 'Deviant t)
+;;(load-theme 'whiteboard t)
 ;; Highlight current line
 (global-hl-line-mode 1)
 ;; Underline current line
@@ -21,9 +27,13 @@
 (display-time)
 ;; Flat look for the mode line
 (set-face-attribute 'mode-line nil :box nil)
+;; Use spaces for indent
+(setq-default indent-tabs-mode nil)
+;; Show useless trailing whitespace
+(setq-default show-trailing-whitespace t)
 ;; Set default font
 ;;(set-default-font "Anonymous Pro-9")
-(set-default-font "Envy Code R-9")
+(set-default-font "Envy Code R-10")
 ;; Load paths
 (add-to-list 'load-path "~/.emacs.d/modes/go")
 ;; Load Go Lang support
@@ -34,6 +44,12 @@
 (setq require-final-newline t)
 ;; No backup files
 (setq make-backup-files nil)
+;; Spell check stuff
+;; You need to install Aspell and an Aspell dictionary
+(add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
+(setq ispell-program-name "aspell")
+(setq ispell-personal-dictionary "lee.dict")
+(require 'ispell)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
