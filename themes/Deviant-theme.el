@@ -60,6 +60,7 @@
 (defvar dv-search-bg dv-link-fg)
 (defvar dv-search-fg dv-default-bg)
 (defvar dv-lazy-hl-bg '("#465451" "#37433f"))
+(defvar dv-hl-line-bg dv-modeline-bg)
 (defvar dv-link-old-fg '("#818780" "#6f746c"))
 (defvar dv-button-bg '("#242b2a" "#1c201f"))
 (defvar dv-header-bg '("#3e4745" "#303735"))
@@ -67,6 +68,7 @@
 
 (custom-theme-set-faces
  'Deviant
+ `(highlight ((t (:background ,(dv-color dv-hl-line-bg)))))
  `(default ((t (:background ,(dv-color dv-default-bg)
                 :foreground ,(dv-color dv-default-fg)))))
  `(cursor ((t (:background ,(dv-color dv-cursor-bg)

@@ -4,6 +4,10 @@
 (tool-bar-mode -1)
 ;; Hide the scroll-bar
 (scroll-bar-mode -1)
+;; Turn off the beeping
+;;(setq ring-bell-function 'ignore)
+;; Flash instead of beep
+(setq visible-bell 1)
 ;; deftheme custom themes directory
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;; deftheme Color Theme
@@ -19,7 +23,6 @@
 ;; Underline current line
 ;;(set-face-attribute hl-line-face nil :underline t)
 ;; Show line numbers
-(line-number-mode 1)
 (global-linum-mode 1)
 ;; Show current column number
 (column-number-mode 1)
@@ -36,8 +39,11 @@
 (set-default-font "Envy Code R-10")
 ;; Load paths
 (add-to-list 'load-path "~/.emacs.d/modes/go")
+(add-to-list 'load-path "~/.emacs.d/modes")
 ;; Load Go Lang support
 (require 'go-mode-load)
+;; Load Rainbow color code highlighting
+(require 'rainbow-mode)
 ;; Do not show startup screen
 (setq inhibit-startup-message t)
 ;; End files with newline
@@ -50,6 +56,9 @@
 (setq ispell-program-name "aspell")
 (setq ispell-personal-dictionary "lee.dict")
 (require 'ispell)
+;; Show matching parens, braces, and brackets
+(show-paren-mode 1)
+(setq show-paren-delay 0)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
