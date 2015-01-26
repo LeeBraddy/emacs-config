@@ -59,12 +59,12 @@
 (defvar dv-button-bg '("#242b2a" "#1c201f"))
 (defvar dv-header-bg '("#3e4745" "#303735"))
 (defvar dv-header-fg '("#868e84" "#747c70"))
-(defvar dv-modeline-bg '("#3e4745" "#303735"))
-(defvar dv-modeline-fg dv-link-fg)
-(defvar dv-modeline-inact-bg dv-modeline-bg)
-(defvar dv-modeline-inact-fg '("#000000" "#000000"))
-(defvar dv-fringe-bg dv-modeline-bg)
-(defvar dv-hl-line-bg dv-modeline-bg)
+(defvar dv-modeline-bg '("#b6beb4" "#a8b1a4"))
+(defvar dv-modeline-fg '("#1212A0" "#1212A0"))
+(defvar dv-modeline-inact-bg '("#b6beb4" "#a8b1a4"))
+(defvar dv-modeline-inact-fg '("#707090" "#707090"))
+(defvar dv-fringe-bg '("#3e4745" "#303735"))
+(defvar dv-hl-line-bg '("#3e4745" "#303735"))
 
 (custom-theme-set-faces
  'Deviant
