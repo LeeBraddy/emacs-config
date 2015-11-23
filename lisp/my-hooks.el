@@ -19,6 +19,10 @@
   (define-key c-mode-base-map "\C-m" 'c-context-line-break))
 (add-hook 'c-initialization-hook 'my-make-CR-do-indent)
 
+;; Javascript.
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+
 ;; HTML.
 (add-hook 'html-mode-hook
 	  '(lambda ()

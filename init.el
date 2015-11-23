@@ -34,12 +34,19 @@
 (setq-default indent-tabs-mode nil)
 ;; Show useless trailing whitespace
 (setq-default show-trailing-whitespace t)
+;; Set coding system to UTF and use UNIX LF
+(prefer-coding-system 'utf-8-unix)
+(setq default-buffer-file-coding-system 'utf-8-unix)
 ;; Set default font
 ;;(set-default-font "Anonymous Pro-9")
 (set-default-font "Envy Code R-10")
 ;; Load paths
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes/go")
 (add-to-list 'load-path "~/.emacs.d/modes")
+;; Javascript.
+;;(add-hook 'js-mode-hook 'js2-minor-mode)
+;;(add-hook 'js2-mode-hook 'ac-js2-mode)
 ;; Load Go Lang support
 (require 'go-mode-load)
 ;; Load Rainbow color code highlighting
@@ -59,7 +66,10 @@
 ;; Show matching parens, braces, and brackets
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-
+;; MELPA Emacs packages
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
